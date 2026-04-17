@@ -1,2 +1,13 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/39DJV9ho)
+# 📚 **Desarrollo de Software**
 
+### Ejercicio N°: 4
+
+---
+
+## 👥 Integrantes
+
+| Legajo | Apellido(s), Nombre(s) | GitHub | Correo Electrónico |
+| :---: | :--- | :--- | :--- |
+| `58351` | **Cattolica, Felipe** | [@Felipe](https://github.com/FeliCat3333) | `felipe.cattolica@alu.frt.utn.edu.ar` |
+| `52551` | **Moreno Maltez, Abril Melina** | [@Abril](https://github.com/Abrilam) | `abril.morenomaltez@alu.frt.utn.edu.ar` |
+| `58375` | **Schiaffino, Nahiara** | [@Nahiara](https://github.com/666nahiara) | `nahiara.schiaffino@alu.frt.utn.edu.ar` |
