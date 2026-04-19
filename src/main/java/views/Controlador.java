@@ -9,6 +9,12 @@ import java.util.Optional;
 
 public class Controlador {
     
+    public static void mostrar(){
+        ListarVehiculosView ventana = new ListarVehiculosView();
+        ventana.listarVehiculos();
+        ventana.setVisible(true);
+        }
+    
     public static ArrayList<VehiculoViewModel> getVehiculos(){
         ArrayList<VehiculoViewModel> vehiculos = new ArrayList<>();
         for(Vehiculo vehiculo : Persistencia.getVehiculos()) {

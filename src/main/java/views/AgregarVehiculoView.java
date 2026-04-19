@@ -11,14 +11,19 @@ public class AgregarVehiculoView extends javax.swing.JFrame {
         this.setResizable(false);
         this.setLocationRelativeTo(null);
         
+        this.addWindowListener(new java.awt.event.WindowAdapter() {
+        @Override
+            public void windowClosing(java.awt.event.WindowEvent e) {
+               MenuPrincipal menu = new MenuPrincipal();
+                menu.setVisible(true); 
+            }  
+        });
+        
         String[] columnas = {
         "Patente", "Marca", "Modelo", "Tipo", "Año",
         "Pais", "Sucursal", "Cap de Carga", "Km/Litro",
         "Litros Extra", "Km a recorrer"
     };
-
-        
-        
 
     model = new javax.swing.table.DefaultTableModel(null, columnas);
     jTable1.setModel(model);
@@ -79,6 +84,7 @@ public class AgregarVehiculoView extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jSeparator11 = new javax.swing.JSeparator();
         CampoKmRecorrer = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -249,6 +255,13 @@ public class AgregarVehiculoView extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setText("Listar Vehiculos");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         jLabel10.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 102, 255));
         jLabel10.setText("INGRESE LOS DATOS DE UN VEHICULO:");
@@ -262,7 +275,10 @@ public class AgregarVehiculoView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(179, 179, 179)
+                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -416,7 +432,9 @@ public class AgregarVehiculoView extends javax.swing.JFrame {
                                 .addGap(2, 2, 2)
                                 .addComponent(jSeparator11, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -424,6 +442,8 @@ public class AgregarVehiculoView extends javax.swing.JFrame {
                         .addGap(179, 179, 179)))
                 .addContainerGap())
         );
+
+        jButton2.getAccessibleContext().setAccessibleName("Volver al Menu Principal");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -472,6 +492,12 @@ public class AgregarVehiculoView extends javax.swing.JFrame {
 
     }//GEN-LAST:event_CampoKmRecorrerActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        //BOTON PARA IR A LISTAR VEHICULOS
+        Controlador.mostrar();
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
  
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -495,10 +521,6 @@ public class AgregarVehiculoView extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(AgregarVehiculoView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -561,6 +583,7 @@ public class AgregarVehiculoView extends javax.swing.JFrame {
     private javax.swing.JTextField CampoKmRecorrer;
     private javax.swing.JTextField CampoKmlitro;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
