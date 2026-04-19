@@ -6,8 +6,10 @@ import java.util.Optional;
 
 public class Persistencia {
     private static ArrayList<Vehiculo> vehiculos = new ArrayList<>();
-    private static ArrayList<Responsable> responsables = new ArrayList<>();
-    private static ArrayList<Sucursal> sucursales = new ArrayList<>();
+    
+    public static void agregarVehiculo(Vehiculo vehiculo){
+        vehiculos.add(vehiculo);
+    }
     
     public static ArrayList<Vehiculo> getVehiculos(){
         return vehiculos;
@@ -18,6 +20,4 @@ public class Persistencia {
                 .filter(v -> v.getPatente().equals(patente))
                 .findFirst();
     }
-    
-   
 }
